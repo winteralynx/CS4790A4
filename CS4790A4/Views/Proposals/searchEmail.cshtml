@@ -1,0 +1,65 @@
+﻿@model  List<CS4790A4.Models.Proposal>
+
+@{
+    ViewBag.Title = "Search By Email";
+}
+
+<h2>All Proposals for selected account</h2>
+<h4>Proposals</h4>
+@foreach (var proposal in Model)
+{
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => proposal.ProposalName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => proposal.ProposalName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => proposal.EdExpRating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => proposal.EdExpRating)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => proposal.InnovationRating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => proposal.InnovationRating)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => proposal.DissemRating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => proposal.DissemRating)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => proposal.EvalRating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => proposal.EvalRating)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => proposal.SupportRating)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => proposal.SupportRating)
+            </dd>
+
+        </dl>
+    </div>
+}
+    

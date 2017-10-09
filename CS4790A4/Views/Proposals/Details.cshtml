@@ -1,0 +1,73 @@
+﻿@model CS4790A4.Models.Proposal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Proposal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProposalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProposalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EdExpRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EdExpRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InnovationRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InnovationRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DissemRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DissemRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvalRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvalRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupportRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupportRating)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

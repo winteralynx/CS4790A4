@@ -1,0 +1,43 @@
+﻿@using CS4790A4.Extensions; 
+@model IEnumerable<CS4790A4.Models.Member>
+
+@{
+    ViewBag.Title = "selectMember";
+}
+
+<h2>Select Member</h2>
+
+<h3>Select a member to modify the proposals that they have graded</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Select", "searchEmail", new { controller = "Proposals", email=item.Email.ToBase64() }) 
+        </td>
+    </tr>
+}
+
+</table>
